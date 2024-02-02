@@ -1,5 +1,7 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
+import ChatText from "./ChatText";
+import Table from "./Table";
 
 const BuilderSelect = () => {
   function CompanySelection() {
@@ -123,17 +125,20 @@ const SelectAll = () => {
     setMounted(true);
   }, []);
 
+  const messageText = "select 태그로 바꿔주고 텍스트는 옵션으로 넣어줘";
+
   return (
     mounted && (
       <>
-        <h6>select 태그로 바꿔주고 텍스트는 옵션으로 넣어줘</h6>
-        <p>빌더 기본</p>
+        <ChatText text={messageText} />
+        <Table />
+        <p>builder Basic</p>
         <BuilderSelect />
         <div></div>
-        <p>빌더 퀄리티 코드 수정</p>
+        <p>builder Quality 코드 수정</p>
         <BuilderSelectRefine />
         <div></div>
-        <p>빌더 기본 + GPT</p>
+        <p>builder 기본 + GPT</p>
         <BuilderGPTSelectRefine />
         <div></div>
         <p>anima 기본</p>
