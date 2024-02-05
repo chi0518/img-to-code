@@ -1,15 +1,44 @@
 import * as React from "react";
 import SelectAll from "./SelectAll";
+import InputAll from "./InputAll";
+import CheckboxAll from "./CheckboxAll";
+import RadioAll from "./RadioAll";
+import PaginationAll from "./PaginationAll";
+import TextareaAll from "./TextareaAll";
+import ButtonAll from "./ButtonAll";
+import CalendarAll from "./CalendarAll";
 
 interface TableProps {
   tag: string;
 }
 
 const SelectArray = SelectAll;
+const InputArray = InputAll;
+const CheckboxArray = CheckboxAll;
+const RadioArray = RadioAll;
+const TextareaArray = TextareaAll;
+const ButtonArray = ButtonAll;
+const PaginationArray = PaginationAll;
+const CalendarArray = CalendarAll;
+
 const getTargetArray = (tag: string) => {
   switch (tag) {
+    case "Input":
+      return InputArray;
     case "Select":
       return SelectArray;
+    case "Checkbox":
+      return CheckboxArray;
+    case "Radio":
+      return RadioArray;
+    case "Textarea":
+      return TextareaArray;
+    case "Button":
+      return ButtonArray;
+    case "Pagination":
+      return PaginationArray;
+    case "Calendar":
+      return CalendarArray;
     default:
       return [];
   }
@@ -37,7 +66,7 @@ const Table = ({ tag }: TableProps) => {
                 {targetArray[0] ? targetArray[0]() : ""}
               </td>
               <td className="py-3 px-4">
-                {targetArray[1] ? targetArray[1]() : ""}
+                {targetArray[3] ? targetArray[3]() : ""}
               </td>
               {/* <td className="py-3 px-4">
                 <a
@@ -51,10 +80,10 @@ const Table = ({ tag }: TableProps) => {
             <tr className="border-b border-blue-gray-200">
               <td className="py-3 px-4">Quality</td>
               <td className="py-3 px-4">
-                {targetArray[2] ? targetArray[2]() : ""}
+                {targetArray[1] ? targetArray[1]() : ""}
               </td>
               <td className="py-3 px-4">
-                {targetArray[3] ? targetArray[3]() : ""}
+                {targetArray[4] ? targetArray[4]() : ""}
               </td>
               {/* <td className="py-3 px-4">
                 <a
@@ -68,7 +97,7 @@ const Table = ({ tag }: TableProps) => {
             <tr className="border-b border-blue-gray-200">
               <td className="py-3 px-4">Basic + Chat GPT3.5</td>
               <td className="py-3 px-4">
-                {targetArray[4] ? targetArray[4]() : ""}
+                {targetArray[2] ? targetArray[2]() : ""}
               </td>
               <td className="py-3 px-4">
                 {targetArray[5] ? targetArray[5]() : ""}
