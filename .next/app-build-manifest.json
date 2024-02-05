@@ -11,10 +11,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(home)/page.js"
     ],
-    "/not-found": [
+    "/board/[typeId]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
+      "static/chunks/app/board/[typeId]/page.js"
     ]
   }
 }

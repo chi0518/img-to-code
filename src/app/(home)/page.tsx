@@ -1,31 +1,29 @@
 "use client";
-import Image from "next/image";
-import SelectAll from "@/components/atoms/SelectAll";
+import Accordion from "@/components/template/Accordion";
+import Table from "@/components/atoms/Table";
 
 export default function Test() {
+  const Tags = [
+    "Input",
+    "Select",
+    "Checkbox",
+    "Radio",
+    "Textarea",
+    "Button",
+    "Pagination",
+    "Calendar",
+  ];
+
   return (
     <>
-      <h1 className="text-2xl	my-3">Image to code</h1>
-      <div className="border-b-2 pb-5">
-        <p className="bg-blue-200 font-medium rounded my-2 p-3">Select</p>
-        <Image
-          width={600}
-          height={0}
-          src="/../../../public/images/select.png"
-          alt={""}
-        />
-        <SelectAll />
-      </div>
-      <div>
-        <p className="bg-blue-200 font-medium rounded my-2 p-3">Input</p>
-        <Image
-          width={600}
-          height={0}
-          src="/../../../public/images/select.png"
-          alt={""}
-        />
-        <SelectAll />
-      </div>
+      <h1 className="container mx-auto p-1 text-2xl">Image to code</h1>
+      {Tags.map((tag: string, tagNumber: number) => {
+        return (
+          <div className="container mx-auto p-1" key={tagNumber}>
+            <Accordion question={tag} answer={() => <Table tag={tag} />} />
+          </div>
+        );
+      })}
     </>
   );
 }

@@ -1,7 +1,4 @@
 import * as React from "react";
-import { useEffect, useState } from "react";
-import ChatText from "./ChatText";
-import Table from "./Table";
 
 const BuilderSelect = () => {
   function CompanySelection() {
@@ -118,41 +115,11 @@ const AnimaSelectGPTRefine = (): JSX.Element => {
   );
 };
 
-const SelectAll = () => {
-  const [mounted, setMounted] = useState<boolean>(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const messageText = "select 태그로 바꿔주고 텍스트는 옵션으로 넣어줘";
-
-  return (
-    mounted && (
-      <>
-        <ChatText text={messageText} />
-        <Table />
-        <p>builder Basic</p>
-        <BuilderSelect />
-        <div></div>
-        <p>builder Quality 코드 수정</p>
-        <BuilderSelectRefine />
-        <div></div>
-        <p>builder 기본 + GPT</p>
-        <BuilderGPTSelectRefine />
-        <div></div>
-        <p>anima 기본</p>
-        <AnimaSelect />
-        <div></div>
-        <p>anima ai 3.5 한글 수정</p>
-        <AnimaSelectRefine />
-        <div></div>
-        <p>anima 기본 + GPT</p>
-        <AnimaSelectGPTRefine />
-        <div></div>
-      </>
-    )
-  );
-};
-
-export default SelectAll;
+export default [
+  BuilderSelect,
+  BuilderSelectRefine,
+  BuilderGPTSelectRefine,
+  AnimaSelect,
+  AnimaSelectRefine,
+  AnimaSelectGPTRefine,
+];
