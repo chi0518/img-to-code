@@ -17,48 +17,89 @@ const BuilderCheckbox = () => {
 
 const BuilderCheckboxRefine = () => {
   //img 태그를 checkbox태그로 변경해줘
+  // return (
+  //   <input
+  //     type="checkbox"
+  //     className="w-full aspect-square flex justify-center items-center px-0.5 my-auto w-3.5 h-3.5 rounded-sm border border-gray-400 border-solid aspect-square"
+  //     alt="Image description"
+  //   />
+  // );
+  //질문을 다시 바꿔서 하니 좀 더 명확하게 나옴
+  const [isChecked, setIsChecked] = React.useState(false);
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
+
   return (
-    <input
-      type="checkbox"
-      className="w-full aspect-square flex justify-center items-center px-0.5 my-auto w-3.5 h-3.5 rounded-sm border border-gray-400 border-solid aspect-square"
-      alt="Image description"
-    />
+    <form className="flex gap-1">
+      <div className="header">
+        <header className="header">
+          <label htmlFor="checkbox">
+            <input
+              type="checkbox"
+              id="checkbox"
+              checked={isChecked}
+              onChange={handleCheckboxChange}
+              style={{
+                backgroundImage:
+                  "url(https://cdn.builder.io/api/v1/image/assets/TEMP/e5f1316cdcbd6b19ccf25d4ca57cb2c1bb2ca3bb3abb1fe406bd73c483af8d12?apiKey=debd433091574dfc8758a1d087d51978&)",
+                width: "100%",
+                aspectRatio: 1,
+              }}
+            />
+          </label>
+        </header>
+      </div>
+      <div className="grow text-sm text-black">전체</div>
+    </form>
   );
 };
 const BuilderGPTCheckboxRefine = () => {
   return (
-    <label className="flex gap-1 items-center cursor-pointer">
+    // <label className="flex gap-1 items-center cursor-pointer">
+    //   <input
+    //     type="checkbox"
+    //     className="hidden" // 숨겨진 체크박스
+    //   />
+    //   <div className="flex justify-center items-center px-0.5 my-auto w-3.5 h-3.5 rounded-sm border border-gray-400 border-solid aspect-square overflow-hidden transition-colors">
+    //     {/* 이미지를 대체할 아이콘 등 적절한 내용으로 교체 */}
+    //     <svg
+    //       className={`w-full aspect-square ${
+    //         // 체크되었을 때의 스타일
+    //         "text-white bg-blue-500"
+    //       }`}
+    //       xmlns="http://www.w3.org/2000/svg"
+    //       fill="none"
+    //       viewBox="0 0 24 24"
+    //       stroke="currentColor"
+    //     >
+    //       <svg
+    //         xmlns="http://www.w3.org/2000/svg"
+    //         fill="none"
+    //         viewBox="0 0 24 24"
+    //         stroke="currentColor"
+    //         className="w-full h-full"
+    //       >
+    //         <path
+    //           strokeLinecap="round"
+    //           strokeLinejoin="round"
+    //           strokeWidth="2"
+    //           d="M5 13l4 4L19 7"
+    //         />
+    //       </svg>
+    //     </svg>
+    //   </div>
+    //   <div className="grow text-sm text-black">전체</div>
+    // </label>
+    <label className="flex gap-1 items-center">
       <input
         type="checkbox"
-        className="hidden" // 숨겨진 체크박스
+        // className="hidden"
+        // You can add any additional props or styles here
       />
-      <div className="flex justify-center items-center px-0.5 my-auto w-3.5 h-3.5 rounded-sm border border-gray-400 border-solid aspect-square overflow-hidden transition-colors">
-        {/* 이미지를 대체할 아이콘 등 적절한 내용으로 교체 */}
-        <svg
-          className={`w-full aspect-square ${
-            // 체크되었을 때의 스타일
-            "text-white bg-blue-500"
-          }`}
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            className="w-full h-full"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M5 13l4 4L19 7"
-            />
-          </svg>
-        </svg>
+      <div className="flex justify-center items-center px-0.5 my-auto w-3.5 h-3.5 rounded-sm border border-gray-400 border-solid aspect-square bg-slate-100">
+        {/* You can customize the checkbox style based on your design */}
       </div>
       <div className="grow text-sm text-black">전체</div>
     </label>
@@ -89,7 +130,17 @@ const AnimaCheckboxRefine = () => {
   );
 };
 const AnimaCheckboxGPTRefine = () => {
-  return <>이미진뎅?</>;
+  //자꾸 히든..
+  return (
+    <div className="inline-flex items-center gap-[4px] relative">
+      <label className="cursor-pointer">
+        <input type="checkbox" />
+        <div className="relative flex-[0_0_auto] w-[25px] mt-[-1.00px] font-normal text-black text-[13px] tracking-[0] leading-[normal]">
+          전체
+        </div>
+      </label>
+    </div>
+  );
 };
 export default [
   BuilderCheckbox,

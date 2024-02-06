@@ -19,7 +19,7 @@ const RadioArray = RadioAll;
 const TextareaArray = TextareaAll;
 const ButtonArray = ButtonAll;
 const PaginationArray = PaginationAll;
-const CalendarArray = CalendarAll;
+// const CalendarArray = CalendarAll;
 
 const getTargetArray = (tag: string) => {
   switch (tag) {
@@ -37,8 +37,8 @@ const getTargetArray = (tag: string) => {
       return ButtonArray;
     case "Pagination":
       return PaginationArray;
-    case "Calendar":
-      return CalendarArray;
+    // case "Calendar":
+    //   return CalendarArray;
     default:
       return [];
   }
