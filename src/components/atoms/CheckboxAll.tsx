@@ -2,16 +2,23 @@ import * as React from "react";
 
 const BuilderCheckbox = () => {
   return (
-    <div className="flex gap-1">
-      <div className="flex justify-center items-center px-0.5 my-auto w-3.5 h-3.5 rounded-sm border border-gray-400 border-solid aspect-square">
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/e5f1316cdcbd6b19ccf25d4ca57cb2c1bb2ca3bb3abb1fe406bd73c483af8d12?apiKey=debd433091574dfc8758a1d087d51978&"
-          className="w-full aspect-square"
-        />
+    <>
+      <div className="flex gap-1">
+        <div className="flex justify-center items-center px-0.5 my-auto w-3.5 h-3.5 rounded-sm border border-gray-400 border-solid aspect-square">
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/e5f1316cdcbd6b19ccf25d4ca57cb2c1bb2ca3bb3abb1fe406bd73c483af8d12?apiKey=debd433091574dfc8758a1d087d51978&"
+            className="w-full aspect-square"
+          />
+        </div>
+        <div className="grow text-sm text-black">전체</div>
       </div>
-      <div className="grow text-sm text-black">전체</div>
-    </div>
+      <span className="text-xs p-0.5 w-full block mt-4">
+        <span className="block">
+          형태에 대한 이해도가 부족. 이미지 자체로 출력됨
+        </span>
+      </span>
+    </>
   );
 };
 
@@ -32,27 +39,35 @@ const BuilderCheckboxRefine = () => {
   };
 
   return (
-    <form className="flex gap-1">
-      <div className="header">
-        <header className="header">
-          <label htmlFor="checkbox">
-            <input
-              type="checkbox"
-              id="checkbox"
-              checked={isChecked}
-              onChange={handleCheckboxChange}
-              style={{
-                backgroundImage:
-                  "url(https://cdn.builder.io/api/v1/image/assets/TEMP/e5f1316cdcbd6b19ccf25d4ca57cb2c1bb2ca3bb3abb1fe406bd73c483af8d12?apiKey=debd433091574dfc8758a1d087d51978&)",
-                width: "100%",
-                aspectRatio: 1,
-              }}
-            />
-          </label>
-        </header>
-      </div>
-      <div className="grow text-sm text-black">전체</div>
-    </form>
+    <>
+      <form className="flex gap-1">
+        <div className="header">
+          <header className="header">
+            <label htmlFor="checkbox">
+              <input
+                type="checkbox"
+                id="checkbox"
+                checked={isChecked}
+                onChange={handleCheckboxChange}
+                style={{
+                  backgroundImage:
+                    "url(https://cdn.builder.io/api/v1/image/assets/TEMP/e5f1316cdcbd6b19ccf25d4ca57cb2c1bb2ca3bb3abb1fe406bd73c483af8d12?apiKey=debd433091574dfc8758a1d087d51978&)",
+                  width: "100%",
+                  aspectRatio: 1,
+                }}
+              />
+            </label>
+          </header>
+        </div>
+        <div className="grow text-sm text-black">전체</div>
+      </form>
+      <span className="text-xs p-0.5 w-full block mt-4">
+        <span className="block">
+          스타일이 아닌 기본적인 태그 형태로의 프롬프팅은 제대로 인지하여 출력됨
+        </span>
+        <span className="block">단 스타일은 많이 제외됨</span>
+      </span>
+    </>
   );
 };
 const BuilderGPTCheckboxRefine = () => {
@@ -92,56 +107,99 @@ const BuilderGPTCheckboxRefine = () => {
     //   </div>
     //   <div className="grow text-sm text-black">전체</div>
     // </label>
-    <label className="flex gap-1 items-center">
-      <input
-        type="checkbox"
-        // className="hidden"
-        // You can add any additional props or styles here
-      />
-      <div className="flex justify-center items-center px-0.5 my-auto w-3.5 h-3.5 rounded-sm border border-gray-400 border-solid aspect-square bg-slate-100">
-        {/* You can customize the checkbox style based on your design */}
-      </div>
-      <div className="grow text-sm text-black">전체</div>
-    </label>
+    <>
+      <label className="flex gap-1 items-center">
+        <input
+          type="checkbox"
+          // className="hidden"
+          // You can add any additional props or styles here
+        />
+        <div className="flex justify-center items-center px-0.5 my-auto w-3.5 h-3.5 rounded-sm border border-gray-400 border-solid aspect-square bg-slate-100">
+          {/* You can customize the checkbox style based on your design */}
+        </div>
+        <div className="grow text-sm text-black">전체</div>
+      </label>
+      <span className="text-xs p-0.5 w-full block mt-4">
+        <span className="block">
+          커스텀이 가능한 형태로 코드를 맞춰서 출력해줌 (ex: hidden class)
+        </span>
+      </span>
+    </>
   );
 };
 const AnimaCheckbox = () => {
   return (
-    <div className="inline-flex items-center gap-[4px] relative">
-      <img
-        className="relative flex-[0_0_auto]"
-        alt="Checkbox icon"
-        src="checkbox-icon.svg"
-      />
-      <div className="relative w-[25px] mt-[-1.00px] [font-family:'Noto_Sans_KR-Regular',Helvetica] font-normal text-black text-[13px] tracking-[0] leading-[normal]">
-        전체
+    <>
+      <div className="inline-flex items-center gap-[4px] relative">
+        <img
+          className="relative flex-[0_0_auto]"
+          alt="Checkbox icon"
+          src="checkbox-icon.svg"
+        />
+        <div className="relative w-[25px] mt-[-1.00px] [font-family:'Noto_Sans_KR-Regular',Helvetica] font-normal text-black text-[13px] tracking-[0] leading-[normal]">
+          전체
+        </div>
       </div>
-    </div>
+      <span className="text-xs p-0.5 w-full block mt-4">
+        <span className="block">이해도 부족, 이미지 그대로 출력</span>
+      </span>
+    </>
   );
 };
 const AnimaCheckboxRefine = () => {
   return (
-    <div className="inline-flex items-center gap-[4px] relative">
-      <input type="checkbox" className="checkbox-icon" />
-      <div className="relative w-[25px] mt-[-1.00px] [font-family:'Noto_Sans_KR-Regular',Helvetica] font-normal text-black text-[13px] tracking-[0] leading-[normal]">
-        전체
+    <>
+      <div className="inline-flex items-center gap-[4px] relative">
+        <input type="checkbox" className="checkbox-icon" />
+        <div className="relative w-[25px] mt-[-1.00px] [font-family:'Noto_Sans_KR-Regular',Helvetica] font-normal text-black text-[13px] tracking-[0] leading-[normal]">
+          전체
+        </div>
       </div>
-    </div>
+      <span className="text-xs p-0.5 w-full block mt-4">
+        <span className="block">체크박스만 미흡, 마크업은 무난한 형태</span>
+      </span>
+    </>
   );
 };
 const AnimaCheckboxGPTRefine = () => {
-  //자꾸 히든..
   return (
-    <div className="inline-flex items-center gap-[4px] relative">
-      <label className="cursor-pointer">
-        <input type="checkbox" />
-        <div className="relative flex-[0_0_auto] w-[25px] mt-[-1.00px] font-normal text-black text-[13px] tracking-[0] leading-[normal]">
-          전체
-        </div>
-      </label>
-    </div>
+    <>
+      <div className="inline-flex items-center gap-[4px] relative">
+        <label className="cursor-pointer">
+          <input type="checkbox" />
+          <div className="relative flex-[0_0_auto] w-[25px] mt-[-1.00px] font-normal text-black text-[13px] tracking-[0] leading-[normal]">
+            전체
+          </div>
+        </label>
+      </div>
+      <span className="text-xs p-0.5 w-full block mt-4">
+        <span className="block">커스텀 가능한 형태로 출력</span>
+      </span>
+    </>
   );
 };
+const AnimaCheckboxReview = () => {
+  return (
+    <>
+      <p className="text-sm">'체크박스'라는 형태의 이해도는 낮으나</p>
+      <p className="text-sm">프롬프트에 대한 수행 과정을 높게 삼</p>
+      <p className="text-sm font-medium">
+        정확도 : <span className="text-red-700">70점</span>
+      </p>
+    </>
+  );
+};
+const BuilderCheckboxReview = () => {
+  return (
+    <>
+      <p className="text-sm">스타일 적용과 마크업 형태가 무난함</p>
+      <p className="text-sm font-medium">
+        정확도 : <span className="text-red-700">70점</span>
+      </p>
+    </>
+  );
+};
+
 export default [
   BuilderCheckbox,
   BuilderCheckboxRefine,
@@ -149,4 +207,6 @@ export default [
   AnimaCheckbox,
   AnimaCheckboxRefine,
   AnimaCheckboxGPTRefine,
+  AnimaCheckboxReview,
+  BuilderCheckboxReview,
 ];

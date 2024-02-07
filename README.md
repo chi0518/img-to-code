@@ -13,6 +13,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Textarea
 - Button
 - Pagination
-- Calendar
 
-> http://localhost:3000/board/1
+> yarn dev
+
+> http://localhost:3000

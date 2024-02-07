@@ -28,7 +28,7 @@ const ChatText = ({ tagMessage }: ChatTextProps) => {
 
   return (
     <div className="my-10">
-      <p>Script : </p>
+      <p>Script</p>
       <p className="bg-gray-100 rounded my-2 p-3 italic">{messageText()}</p>
     </div>
   );

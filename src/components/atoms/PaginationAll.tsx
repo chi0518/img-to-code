@@ -3,19 +3,24 @@ import { useState } from "react";
 
 const BuilderPagination = () => {
   return (
-    <div className="flex overflow-hidden relative flex-col gap-5 justify-between aspect-[5.31] max-w-[85px]">
-      <img
-        loading="lazy"
-        srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&"
-        className="object-cover absolute inset-0 size-full"
-      />
-      <div className="flex relative flex-col justify-center aspect-square">
-        <div className="shrink-0 h-4 rounded-full stroke-[1px]" />
+    <>
+      <div className="flex overflow-hidden relative flex-col gap-5 justify-between aspect-[5.31] max-w-[85px]">
+        <img
+          loading="lazy"
+          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&"
+          className="object-cover absolute inset-0 size-full"
+        />
+        <div className="flex relative flex-col justify-center aspect-square">
+          <div className="shrink-0 h-4 rounded-full stroke-[1px]" />
+        </div>
+        <div className="flex relative flex-col justify-center aspect-square">
+          <div className="shrink-0 h-4 rounded-full stroke-[1px]" />
+        </div>
       </div>
-      <div className="flex relative flex-col justify-center aspect-square">
-        <div className="shrink-0 h-4 rounded-full stroke-[1px]" />
-      </div>
-    </div>
+      <span className="text-xs p-0.5 w-full block mt-4">
+        <span className="block">전체가 그대로 이미지로 출력</span>
+      </span>
+    </>
   );
 };
 
@@ -110,26 +115,31 @@ const BuilderPaginationRefine = () => {
   };
 
   return (
-    <form className="flex overflow-hidden relative flex-col gap-5 justify-between aspect-[5.31] max-w-[85px]">
-      <a
-        href="#"
-        onClick={handleClick}
-        className={getStyle()}
-        aria-label="Clickable Image"
-      >
-        <img
-          loading="lazy"
-          srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&"
-          className="object-cover absolute inset-0 size-full"
-        />
-      </a>
-      <header className="flex relative flex-col justify-center aspect-square">
-        <div className="header" role="button" aria-label="Header"></div>
-      </header>
-      <header className="flex relative flex-col justify-center aspect-square">
-        <div className="header" role="button" aria-label="Header"></div>
-      </header>
-    </form>
+    <>
+      <form className="flex overflow-hidden relative flex-col gap-5 justify-between aspect-[5.31] max-w-[85px]">
+        <a
+          href="#"
+          onClick={handleClick}
+          className={getStyle()}
+          aria-label="Clickable Image"
+        >
+          <img
+            loading="lazy"
+            srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/83faf67203a8809edc268075b9b7b79b4cd994df5550e25a09c2170609ed0981?apiKey=debd433091574dfc8758a1d087d51978&"
+            className="object-cover absolute inset-0 size-full"
+          />
+        </a>
+        <header className="flex relative flex-col justify-center aspect-square">
+          <div className="header" role="button" aria-label="Header"></div>
+        </header>
+        <header className="flex relative flex-col justify-center aspect-square">
+          <div className="header" role="button" aria-label="Header"></div>
+        </header>
+      </form>
+      <span className="text-xs p-0.5 w-full block mt-4">
+        <span className="block">img to code 변환이 제대로 이뤄지지 않음</span>
+      </span>
+    </>
   );
 };
 
@@ -166,106 +176,131 @@ const NumberDisplay: React.FC<NumberDisplayProps> = ({ number }) => {
 const BuilderGPTPaginationRefine = () => {
   //gpt4
   return (
-    <div className="flex bg-gray-200">
-      <div className="flex justify-center items-center w-1/4">
-        <ArrowButton direction="left" onClick={() => console.log("Go Left")} />
+    <>
+      <div className="flex bg-gray-200">
+        <div className="flex justify-center items-center w-1/4">
+          <ArrowButton
+            direction="left"
+            onClick={() => console.log("Go Left")}
+          />
+        </div>
+        <NumberDisplay number={1} />
+        <NumberDisplay number={2} />
+        <NumberDisplay number={3} />
+        <div className="flex justify-center items-center w-1/4">
+          <ArrowButton
+            direction="right"
+            onClick={() => console.log("Go Right")}
+          />
+        </div>
       </div>
-      <NumberDisplay number={1} />
-      <NumberDisplay number={2} />
-      <NumberDisplay number={3} />
-      <div className="flex justify-center items-center w-1/4">
-        <ArrowButton
-          direction="right"
-          onClick={() => console.log("Go Right")}
-        />
-      </div>
-    </div>
+      <span className="text-xs p-0.5 w-full block mt-4">
+        <span className="block text-red-700">GPT4</span>
+        <span className="block">
+          이미지에 대한 이해도가 높음, 스타일은 이해하지 못하지만 용도에 맞게
+          출력
+        </span>
+      </span>
+    </>
   );
 };
 const AnimaPagination = () => {
   return (
-    <div className="relative w-[85px] h-[17px]">
-      <div className="flex w-[16px] h-[16px] items-start gap-[10px] absolute top-px left-[69px]">
-        <div className="relative w-[16px] h-[16px] rounded-[8px] border border-solid border-[#e9e9e9] rotate-180" />
+    <>
+      <div className="relative w-[85px] h-[17px]">
+        <div className="flex w-[16px] h-[16px] items-start gap-[10px] absolute top-px left-[69px]">
+          <div className="relative w-[16px] h-[16px] rounded-[8px] border border-solid border-[#e9e9e9] rotate-180" />
+          <img
+            className="absolute w-[10px] h-[10px] top-[3px] left-[3px]"
+            alt="Angles left solid"
+            src="angles-left-solid-3.svg"
+          />
+        </div>
+        <div className="absolute w-[10px] -top-px left-[54px] [font-family:'Noto_Sans_KR-Regular',Helvetica] font-normal text-[#676767] text-[12px] tracking-[0] leading-[normal]">
+          3
+        </div>
         <img
-          className="absolute w-[10px] h-[10px] top-[3px] left-[3px]"
-          alt="Angles left solid"
-          src="angles-left-solid-3.svg"
+          className="absolute w-[8px] h-px top-[16px] left-[38px] object-cover"
+          alt="Line"
+          src="line-12.svg"
         />
+        <div className="absolute w-[10px] -top-px left-[39px] [font-family:'Noto_Sans_KR-Regular',Helvetica] font-normal text-[#676767] text-[12px] tracking-[0] leading-[normal]">
+          2
+        </div>
+        <div className="absolute w-[10px] -top-px left-[24px] [font-family:'Noto_Sans_KR-Regular',Helvetica] font-normal text-[#676767] text-[12px] tracking-[0] leading-[normal]">
+          1
+        </div>
+        <div className="flex w-[16px] h-[16px] items-start gap-[10px] absolute top-px left-0">
+          <div className="relative w-[16px] h-[16px] rounded-[8px] border border-solid border-[#e9e9e9]" />
+          <img
+            className="absolute w-[10px] h-[10px] top-[3px] left-[3px]"
+            alt="Angles left solid"
+            src="angles-left-solid-2.svg"
+          />
+        </div>
       </div>
-      <div className="absolute w-[10px] -top-px left-[54px] [font-family:'Noto_Sans_KR-Regular',Helvetica] font-normal text-[#676767] text-[12px] tracking-[0] leading-[normal]">
-        3
-      </div>
-      <img
-        className="absolute w-[8px] h-px top-[16px] left-[38px] object-cover"
-        alt="Line"
-        src="line-12.svg"
-      />
-      <div className="absolute w-[10px] -top-px left-[39px] [font-family:'Noto_Sans_KR-Regular',Helvetica] font-normal text-[#676767] text-[12px] tracking-[0] leading-[normal]">
-        2
-      </div>
-      <div className="absolute w-[10px] -top-px left-[24px] [font-family:'Noto_Sans_KR-Regular',Helvetica] font-normal text-[#676767] text-[12px] tracking-[0] leading-[normal]">
-        1
-      </div>
-      <div className="flex w-[16px] h-[16px] items-start gap-[10px] absolute top-px left-0">
-        <div className="relative w-[16px] h-[16px] rounded-[8px] border border-solid border-[#e9e9e9]" />
-        <img
-          className="absolute w-[10px] h-[10px] top-[3px] left-[3px]"
-          alt="Angles left solid"
-          src="angles-left-solid-2.svg"
-        />
-      </div>
-    </div>
+      <span className="text-xs p-0.5 w-full block mt-4">
+        <span className="block">화살표만 이미지로 출력, 스타일도 적용됨</span>
+      </span>
+    </>
   );
 };
 const AnimaPaginationRefine = () => {
   return (
-    <div className="relative w-[85px] h-[17px]">
-      <div className="flex w-[16px] h-[16px] items-start gap-[10px] absolute top-px left-[69px]">
-        <div className="relative w-[16px] h-[16px] rounded-[8px] border border-solid border-[#e9e9e9] rotate-180">
+    <>
+      <div className="relative w-[85px] h-[17px]">
+        <div className="flex w-[16px] h-[16px] items-start gap-[10px] absolute top-px left-[69px]">
+          <div className="relative w-[16px] h-[16px] rounded-[8px] border border-solid border-[#e9e9e9] rotate-180">
+            <a className="number" href="#">
+              1
+            </a>
+          </div>
+          <img
+            className="absolute w-[10px] h-[10px] top-[3px] left-[3px]"
+            alt="Angles left solid"
+            src="angles-left-solid-3.svg"
+          />
+        </div>
+        <div className="absolute w-[10px] -top-px left-[54px] [font-family:'Noto_Sans_KR-Regular',Helvetica] font-normal text-[#676767] text-[12px] tracking-[0] leading-[normal]">
           <a className="number" href="#">
-            1
+            2
           </a>
         </div>
         <img
-          className="absolute w-[10px] h-[10px] top-[3px] left-[3px]"
-          alt="Angles left solid"
-          src="angles-left-solid-3.svg"
+          className="absolute w-[8px] h-px top-[16px] left-[38px] object-cover"
+          alt="Line"
+          src="line-12.svg"
         />
-      </div>
-      <div className="absolute w-[10px] -top-px left-[54px] [font-family:'Noto_Sans_KR-Regular',Helvetica] font-normal text-[#676767] text-[12px] tracking-[0] leading-[normal]">
-        <a className="number" href="#">
-          2
-        </a>
-      </div>
-      <img
-        className="absolute w-[8px] h-px top-[16px] left-[38px] object-cover"
-        alt="Line"
-        src="line-12.svg"
-      />
-      <div className="absolute w-[10px] -top-px left-[39px] [font-family:'Noto_Sans_KR-Regular',Helvetica] font-normal text-[#676767] text-[12px] tracking-[0] leading-[normal]">
-        <a className="number" href="#">
-          3
-        </a>
-      </div>
-      <div className="absolute w-[10px] -top-px left-[24px] [font-family:'Noto_Sans_KR-Regular',Helvetica] font-normal text-[#676767] text-[12px] tracking-[0] leading-[normal]">
-        <a className="number" href="#">
-          4
-        </a>
-      </div>
-      <div className="flex w-[16px] h-[16px] items-start gap-[10px] absolute top-px left-0">
-        <div className="relative w-[16px] h-[16px] rounded-[8px] border border-solid border-[#e9e9e9]">
+        <div className="absolute w-[10px] -top-px left-[39px] [font-family:'Noto_Sans_KR-Regular',Helvetica] font-normal text-[#676767] text-[12px] tracking-[0] leading-[normal]">
           <a className="number" href="#">
-            5
+            3
           </a>
         </div>
-        <img
-          className="absolute w-[10px] h-[10px] top-[3px] left-[3px]"
-          alt="Angles left solid"
-          src="angles-left-solid-2.svg"
-        />
+        <div className="absolute w-[10px] -top-px left-[24px] [font-family:'Noto_Sans_KR-Regular',Helvetica] font-normal text-[#676767] text-[12px] tracking-[0] leading-[normal]">
+          <a className="number" href="#">
+            4
+          </a>
+        </div>
+        <div className="flex w-[16px] h-[16px] items-start gap-[10px] absolute top-px left-0">
+          <div className="relative w-[16px] h-[16px] rounded-[8px] border border-solid border-[#e9e9e9]">
+            <a className="number" href="#">
+              5
+            </a>
+          </div>
+          <img
+            className="absolute w-[10px] h-[10px] top-[3px] left-[3px]"
+            alt="Angles left solid"
+            src="angles-left-solid-2.svg"
+          />
+        </div>
       </div>
-    </div>
+      <span className="text-xs p-0.5 w-full block mt-4">
+        <span className="block">
+          페이징네이션에 대한 옵션이 추가되니 출력물의 형태가 변환되었지만 코드
+          자체는 깔끔
+        </span>
+      </span>
+    </>
   );
 };
 const AnimaPaginationGPTRefine = () => {
@@ -273,39 +308,69 @@ const AnimaPaginationGPTRefine = () => {
   //클릭이 가능하게 a태그들로 변경해줘
 
   return (
-    <div className="relative flex items-center gap-4">
-      <a
-        href="#"
-        className="relative w-4 h-4 rounded-full border border-solid border-[#e9e9e9] transform rotate-180 block"
-      >
-        <img
-          className="absolute w-2 h-2 top-1 left-1"
-          alt="Angles left solid"
-          src="angles-left-solid-3.svg"
-        />
-      </a>
-      <a href="#" className="text-[#676767] text-12 font-normal">
-        3
-      </a>
-      <div className="h-[12px] w-px bg-gray-300" />
-      <a href="#" className="text-[#676767] text-12 font-normal">
-        2
-      </a>
-      <div className="h-[12px] w-px bg-gray-300" />
-      <a href="#" className="text-[#676767] text-12 font-normal">
-        1
-      </a>
-      <a
-        href="#"
-        className="relative w-4 h-4 rounded-full border border-solid border-[#e9e9e9] block"
-      >
-        <img
-          className="absolute w-2 h-2 top-1 left-1"
-          alt="Angles left solid"
-          src="angles-left-solid-2.svg"
-        />
-      </a>
-    </div>
+    <>
+      <div className="relative flex items-center gap-4">
+        <a
+          href="#"
+          className="relative w-4 h-4 rounded-full border border-solid border-[#e9e9e9] transform rotate-180 block"
+        >
+          <img
+            className="absolute w-2 h-2 top-1 left-1"
+            alt="Angles left solid"
+            src="angles-left-solid-3.svg"
+          />
+        </a>
+        <a href="#" className="text-[#676767] text-12 font-normal">
+          3
+        </a>
+        <div className="h-[12px] w-px bg-gray-300" />
+        <a href="#" className="text-[#676767] text-12 font-normal">
+          2
+        </a>
+        <div className="h-[12px] w-px bg-gray-300" />
+        <a href="#" className="text-[#676767] text-12 font-normal">
+          1
+        </a>
+        <a
+          href="#"
+          className="relative w-4 h-4 rounded-full border border-solid border-[#e9e9e9] block"
+        >
+          <img
+            className="absolute w-2 h-2 top-1 left-1"
+            alt="Angles left solid"
+            src="angles-left-solid-2.svg"
+          />
+        </a>
+      </div>
+      <span className="text-xs p-0.5 w-full block mt-4">
+        <span className="block">
+          3.5에서 변환, 추론 결과가 그렇게 좋친 못했음
+        </span>
+      </span>
+    </>
+  );
+};
+const AnimaPaginationReview = () => {
+  return (
+    <>
+      <p className="text-sm">
+        이미지에서 사용 용도에 대한 이해가 되지 않으니 출력도 제대로 안됨
+      </p>
+      <p className="text-sm font-medium">
+        정확도 : <span className="text-red-700">40점</span>
+      </p>
+    </>
+  );
+};
+const BuilderPaginationReview = () => {
+  return (
+    <>
+      <p className="text-sm">폰트 사이즈, 컬러는 유사하게 가져옴</p>
+      <p className="text-sm">코드 퀄리티도 무난했음</p>
+      <p className="text-sm font-medium">
+        정확도 : <span className="text-red-700">70점</span>
+      </p>
+    </>
   );
 };
 export default [
@@ -315,4 +380,6 @@ export default [
   AnimaPagination,
   AnimaPaginationRefine,
   AnimaPaginationGPTRefine,
+  AnimaPaginationReview,
+  BuilderPaginationReview,
 ];

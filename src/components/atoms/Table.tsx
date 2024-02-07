@@ -50,22 +50,24 @@ const Table = ({ tag }: TableProps) => {
   return (
     <div className="flex items-center justify-center">
       <div className="overflow-x-auto">
-        <table className="min-w-full bg-white shadow-md rounded-xl">
+        <table className="min-w-full bg-white border border-t-2 border-t-[#3C82F6]">
           <thead>
             <tr className="bg-blue-gray-100 text-gray-700">
-              <th className="py-3 px-4 text-left"></th>
-              <th className="py-3 px-4 text-left">Builder.io</th>
-              <th className="py-3 px-4 text-left">Anima</th>
+              <th className="py-3 px-4 text-center bg-[#fafafa]"></th>
+              <th className="py-3 px-4 text-center bg-[#fafafa]">Builder.io</th>
+              <th className="py-3 px-4 text-center bg-[#fafafa]">Anima</th>
               {/* <th className="py-3 px-4 text-left">Action</th> */}
             </tr>
           </thead>
           <tbody className="text-blue-gray-900">
-            <tr className="border-b border-blue-gray-200">
-              <td className="py-3 px-4">Basic</td>
-              <td className="py-3 px-4">
+            <tr className="border-b border border-blue-gray-200">
+              <td className="py-3 border px-4 text-center bg-[#fafafa]">
+                Basic
+              </td>
+              <td className="py-3 border px-4">
                 {targetArray[0] ? targetArray[0]() : ""}
               </td>
-              <td className="py-3 px-4">
+              <td className="py-3 border px-4">
                 {targetArray[3] ? targetArray[3]() : ""}
               </td>
               {/* <td className="py-3 px-4">
@@ -77,12 +79,14 @@ const Table = ({ tag }: TableProps) => {
                 </a>
               </td> */}
             </tr>
-            <tr className="border-b border-blue-gray-200">
-              <td className="py-3 px-4">Quality</td>
-              <td className="py-3 px-4">
+            <tr className="border-b border border-blue-gray-200">
+              <td className="py-3 border px-4 text-center bg-[#fafafa]">
+                Quality
+              </td>
+              <td className="py-3 border px-4">
                 {targetArray[1] ? targetArray[1]() : ""}
               </td>
-              <td className="py-3 px-4">
+              <td className="py-3 border px-4">
                 {targetArray[4] ? targetArray[4]() : ""}
               </td>
               {/* <td className="py-3 px-4">
@@ -94,13 +98,34 @@ const Table = ({ tag }: TableProps) => {
                 </a>
               </td> */}
             </tr>
-            <tr className="border-b border-blue-gray-200">
-              <td className="py-3 px-4">Basic + Chat GPT3.5</td>
-              <td className="py-3 px-4">
+            <tr className="border-b border border-blue-gray-200">
+              <td className="py-3 border px-4 text-center bg-[#fafafa]">
+                Basic + Chat GPT3.5
+              </td>
+              <td className="py-3 border px-4">
                 {targetArray[2] ? targetArray[2]() : ""}
               </td>
-              <td className="py-3 px-4">
+              <td className="py-3 border px-4">
                 {targetArray[5] ? targetArray[5]() : ""}
+              </td>
+              {/* <td className="py-3 px-4">
+                <a
+                  href="#"
+                  className="font-medium text-blue-600 hover:text-blue-800"
+                >
+                  Edit
+                </a>
+              </td> */}
+            </tr>
+            <tr className="border-b border border-blue-gray-200">
+              <td className="py-3 border px-4 text-center bg-[#fafafa]">
+                Review
+              </td>
+              <td className="py-3 border px-4">
+                {targetArray[6] ? targetArray[6]() : ""}
+              </td>
+              <td className="py-3 border px-4">
+                {targetArray[7] ? targetArray[7]() : ""}
               </td>
               {/* <td className="py-3 px-4">
                 <a
